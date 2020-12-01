@@ -35,11 +35,12 @@ router.post('/', async (req, res) => {
             res.send('Error', error);
             res.redirect('/user');
         } else {
+                //MANGLER! Skal sende velkomstmail til brugeren (til signup_email) med nodemailer
                 res.redirect('../login');
         }
     });
 });
 
-//PATCH metode, hvis man skal kunne opdatere en bruger
+//PUT/PATCH metode ('/user/:id', hvis man skal kunne opdatere en bruger
 
 module.exports = router;
