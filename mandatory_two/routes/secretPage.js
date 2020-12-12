@@ -5,8 +5,7 @@ const fs = require('fs');
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 
-const path = 'C:\\Users\\Sofie\\IdeaProjects\\node_valgfag\\mandatory_two_auth\\mandatory_two\\';
-const secretPage = fs.readFileSync(path + '/public/secretPage/secretPage.html').toString();
+const secretPage = fs.readFileSync(__dirname + '/../public/secretPage/secretPage.html').toString();
 
 router.get('/', (req, res) => {
    if (req.session.loggedin) {

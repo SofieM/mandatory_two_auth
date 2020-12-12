@@ -9,8 +9,7 @@ router.use(express.urlencoded({ extended: true }));
 
 const bcrypt = require("bcrypt");
 
-const path = 'C:\\Users\\Sofie\\IdeaProjects\\node_valgfag\\mandatory_two_auth\\mandatory_two\\';
-const login = fs.readFileSync(path + '/public/login/login.html').toString();
+const login = fs.readFileSync(__dirname + '/../public/login/login.html').toString();
 
 router.get('/', (req, res) => {
     return res.send(login);

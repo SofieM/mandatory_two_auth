@@ -9,9 +9,8 @@ const bcrypt = require("bcrypt");
 const saltRounds = 12;
 
 const fs = require('fs');
-const path = 'C:\\Users\\Sofie\\IdeaProjects\\node_valgfag\\mandatory_two_auth\\mandatory_two\\';
 
-const user = fs.readFileSync(path + '/public/user/user.html').toString();
+const user = fs.readFileSync(__dirname + '/../public/user/user.html').toString();
 
 router.get('/', (req, res) => {
     return res.send(user)
